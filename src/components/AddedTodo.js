@@ -1,4 +1,3 @@
-import React, { useState, useRef, useEffect } from 'react';
 import TodoItem from './TodoItem';
 
 const AddedTodo = (props) => {
