@@ -1,19 +1,8 @@
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #008cff, #ff00a9);
-  opacity: 0.8;
-  z-index: -1;
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(45deg, #008cff, #ff00a9);
   font-family: Arial, sans-serif;
   height: 100%;
   overflow: hidden;
@@ -27,7 +16,6 @@ body {
 
 .heading h1 {
   margin: 20px auto;
-  /* Optional: Removes default margin */
   color: aliceblue;
   font-size: 5vmin;
   font-family: 'Sacramento', cursive;
@@ -42,7 +30,7 @@ body {
 
 .todo-list,
 .added-todo {
-  height: 69vh;
+  height: 80vh;
   width: 50%;
   overflow-y: scroll;
   padding: 20px;
@@ -70,15 +58,15 @@ body {
   padding: 10px;
   margin: 10px;
   height: 10vh;
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #title {
   color: aliceblue;
   font-size: 3vmin;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 #button {
