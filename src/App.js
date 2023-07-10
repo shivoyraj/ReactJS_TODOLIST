@@ -13,18 +13,24 @@ const App = () => {
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/todos')
-      .then((response) => setTodoItems(response.data))
+      .then((response) => {
+        setTodoItems(response.data);
+        const storedItems = Object.keys(localStorage).map(key => JSON.parse(localStorage.getItem(key)));
+        setSelectItems(storedItems);
+      })
       .catch((error) => console.log(error));
   }, []);
 
   const removeFromSelectedItems = (itemToBeDeleted) => {
     setSelectItems(selectItems.filter((item) => item.id !== itemToBeDeleted.id));
     setTodoItems([...todoItems, itemToBeDeleted]);
+    localStorage.removeItem(itemToBeDeleted.id.toString());
   };
 
   const addToSelectedItems = (itemToBeAdded) => {
     setTodoItems(todoItems.filter((item) => item.id !== itemToBeAdded.id));
     setSelectItems([...selectItems, itemToBeAdded]);
+    localStorage.setItem(itemToBeAdded.id.toString(), JSON.stringify(itemToBeAdded));
   };
 
   return (
