@@ -15,8 +15,7 @@ const App = () => {
       .get('https://jsonplaceholder.typicode.com/todos')
       .then((response) => {
         setTodoItems(response.data);
-        const storedItems = Object.keys(localStorage).map(key => JSON.parse(localStorage.getItem(key)));
-        setSelectItems(storedItems);
+        setSelectItems(Object.keys(localStorage).map(key => JSON.parse(localStorage.getItem(key))));
       })
       .catch((error) => console.log(error));
   }, []);
