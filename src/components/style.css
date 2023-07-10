@@ -1,3 +1,4 @@
+/* Set margin and padding to 0 for the entire document */
 html,
 body {
   margin: 0;
@@ -8,12 +9,14 @@ body {
   overflow: hidden;
 }
 
+/* Center the heading text vertically and horizontally */
 .heading {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Styling for the heading text */
 .heading h1 {
   margin: 20px auto;
   color: aliceblue;
@@ -21,6 +24,7 @@ body {
   font-family: 'Sacramento', cursive;
 }
 
+/* Container for the todo list and added todos */
 .container {
   height: 100%;
   display: flex;
@@ -28,6 +32,7 @@ body {
   overflow: hidden;
 }
 
+/* Styling for the todo list and added todos */
 .todo-list,
 .added-todo {
   height: 80vh;
@@ -36,6 +41,7 @@ body {
   padding: 20px;
 }
 
+/* Styling for the scrollbar */
 .todo-list::-webkit-scrollbar,
 .added-todo::-webkit-scrollbar {
   width: 10px;
@@ -52,6 +58,7 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for the item container */
 #ItemContainer {
   background-color: rgba(29, 29, 148, 0.629);
   border-radius: 15px;
@@ -63,12 +70,14 @@ body {
   justify-content: space-between;
 }
 
+/* Styling for the title */
 #title {
   color: aliceblue;
   font-size: 3vmin;
   flex-grow: 1;
 }
 
+/* Styling for the button */
 #button {
   width: 5vmin;
   height: 5vmin;
