@@ -19,6 +19,20 @@ body {
   overflow: hidden;
 }
 
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h1 {
+  margin: 20px auto;
+  /* Optional: Removes default margin */
+  color: aliceblue;
+  font-size: 5vmin;
+  font-family: 'Sacramento', cursive;
+}
+
 .container {
   height: 100%;
   display: flex;
@@ -32,4 +46,58 @@ body {
   width: 50%;
   overflow-y: scroll;
   padding: 20px;
+}
+
+.todo-list::-webkit-scrollbar,
+.added-todo::-webkit-scrollbar {
+  width: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb,
+.added-todo::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 140, 255, 0.8);
+  border-radius: 5px;
+}
+
+.todo-list::-webkit-scrollbar-track,
+.added-todo::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#ItemContainer {
+  background-color: rgba(29, 29, 148, 0.629);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  height: 10vh;
+}
+
+#title {
+  margin-left: auto;
+  color: aliceblue;
+  font-size: 3vmin;
+}
+
+#button {
+  width: 5vmin;
+  height: 5vmin;
+  margin-left: 90%;
+  background-color: #c1d4ee;
+  font-size: 3vmin;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .todo-list,
+  .added-todo {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+  }
+
+  #button {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }

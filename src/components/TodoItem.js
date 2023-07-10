@@ -4,12 +4,12 @@ const TodoItem = (props) => {
     props.isSelected ? props.removeFromSelectedItems(props.todo) : props.addToSelectedItems(props.todo);
   }
 
-  const buttonTitle = props.isSelected ? "Remove from ToDo List" : "Add to ToDo List";
+  const buttonTitle = props.isSelected ? "-" : "+";
 
   return (
-    <div>
-      <span>{props.todo.title}</span>
-      <button onClick={toggleItem}>{buttonTitle}</button>
+    <div id="ItemContainer">
+      <span id = "title">{props.todo.title}</span>
+      <button id="button" onClick={toggleItem}>{buttonTitle}</button>
     </div>
   );
 };
