@@ -29,10 +29,10 @@ const App = () => {
 
   return (
     <>
-      <td class="heading">
+      <div className="heading">
         <h1 id="itemsHeading">Item List</h1>
         <h1 id="todosHeading">Todo List</h1>
-      </td>
+      </div>
       <div className="container">
         <div className="todo-list">
           <TodoList todoItems={todoItems} addToSelectedItems={addToSelectedItems} />
